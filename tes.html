@@ -1,0 +1,20 @@
+<select id="select">
+    <option value="1" data-foo="dogs">this</option>
+    <option value="2" data-foo="cats">that</option>
+    <option value="3" data-foo="gerbils">other</option>
+</select>
+
+<script>
+    $(function () {
+        $('select').change(function () {
+            var selected = $(this).find('option:selected');
+            var extra = selected.data('foo'); 
+       ...
+    });
+});
+
+    // Plain old JavaScript
+    var sel = document.getElementById('select');
+    var selected = sel.options[sel.selectedIndex];
+    var extra = selected.getAttribute('data-foo');
+</script>
